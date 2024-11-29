@@ -1,0 +1,14 @@
+.back {
+    text-decoration: none;
+    border: none;
+    outline: none;
+    width: fit-content;
+    padding: 5px 10px;
+    background-color: var(--dark-blue);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+    z-index: 100;
+}

@@ -1,0 +1,26 @@
+.all-countrys {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 50px;
+}
+.all-countrys .country {
+    background-color: var(--dark-blue);
+    text-decoration: none;
+    transition: 0.5s;
+}
+.all-countrys .country:hover {
+    transform: scale(1.1);
+}
+.all-countrys .country img {
+    width: 100%;
+    height: 200px;
+}
+.all-countrys .country .info {
+    padding: 30px 30px 40px;
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+}
+.all-countrys .country .info .title {
+    font-weight: bold;
+}

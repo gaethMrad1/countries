@@ -1,0 +1,7 @@
+.filter {
+    width: 150px;
+    background-color: var(--dark-blue);
+    color: var(--white);
+    outline: none;
+    padding: 10px;
+}
