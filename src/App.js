@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header/Header';
 import Home from './pages/Home';
@@ -24,14 +24,12 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <BrowserRouter>
-        <GlubalState.Provider value={values}>
-          <Routes>
-            <Route path="/countries" element={<Home />}/>
-            <Route path="/detail/:countryName" element={<Detail />}/>
-          </Routes>
-        </GlubalState.Provider>
-      </BrowserRouter>
+      <GlubalState.Provider value={values}>
+        <Routes>
+          <Route path="/countries" element={<Home />}/>
+          <Route path="/detail/:countryName" element={<Detail />}/>
+        </Routes>
+      </GlubalState.Provider>
     </div>
   );
 }
