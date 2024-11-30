@@ -27,8 +27,8 @@ function App() {
       <BrowserRouter>
         <GlubalState.Provider value={values}>
           <Routes>
-            <Route path='/countries' element={<Home />}/>
-            <Route path='/detail/:countryName' element={<Detail />}/>
+            <Route path="/countries" element={<Home />}/>
+            <Route path="/detail/:countryName" element={<Detail />}/>
           </Routes>
         </GlubalState.Provider>
       </BrowserRouter>
