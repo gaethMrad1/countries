@@ -1,10 +1,21 @@
-import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header/Header';
 import Home from './pages/Home';
 import { useEffect, useState } from 'react';
 import { GlubalState } from './context/GlubalState';
 import Detail from './pages/Detail';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+
+const router = createBrowserRouter([
+  {
+    path: "/countries",
+    element: <Home />,  // المسار الرئيسي
+  },
+  {
+    path: "/detail/:countryName",
+    element: <Detail />,
+  },
+]);
 
 function App() {
   const [countries, setCountries] = useState([]);
@@ -25,10 +36,7 @@ function App() {
     <div className="App">
       <Header />
       <GlubalState.Provider value={values}>
-        <Routes>
-          <Route path="/countries" element={<Home />}/>
-          <Route path="/detail/:countryName" element={<Detail />}/>
-        </Routes>
+        <RouterProvider router={router}/>
       </GlubalState.Provider>
     </div>
   );
