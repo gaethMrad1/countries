@@ -7,7 +7,7 @@ function Search() {
 
   const searchCountry = (e) => {
     const filtered = allCountries.filter((country) => {
-      return country.name.common.includes(e.target.value)
+      return country.name.common.toLowerCase().includes(e.target.value.toLowerCase())
     })
     setCountries(filtered);
   }
