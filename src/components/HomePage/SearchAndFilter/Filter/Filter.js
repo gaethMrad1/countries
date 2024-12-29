@@ -10,10 +10,12 @@ function Filter() {
       fetch("https://restcountries.com/v3.1/all")
     .then(response => response.json())
     .then(data => setCountries(data))
+    .catch((error) => { throw new Error(error) })
     } else {
       fetch(`https://restcountries.com/v3.1/region/${e.target.value.toLowerCase()}`)
     .then(response => response.json())
     .then(data => setCountries(data))
+    .catch((error) => { throw new Error(error) })
     }
   }
 

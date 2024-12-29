@@ -25,9 +25,10 @@ function App() {
     fetch("https://restcountries.com/v3.1/all")
     .then(response => response.json())
     .then(data => {
-      setCountries(data)
-      setAllCountries(data)
+      data && setCountries(data)
+      data && setAllCountries(data)
     })
+    .catch((error) => { throw new Error(error) })
   }, [])
 
   const values = {countries, setCountries, allCountries}
