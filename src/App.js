@@ -8,7 +8,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 const router = createBrowserRouter([
   {
-    path: "/countries",
+    path: "/",
     element: <Home />,  // المسار الرئيسي
   },
   {
