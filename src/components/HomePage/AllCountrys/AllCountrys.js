@@ -8,7 +8,7 @@ function AllCountrys() {
 
   return (
     <div className="all-countrys">
-        {countries.map((ele) => {
+        {countries && countries.map((ele) => {
             return (
                 <Link className="country" to={`/detail/${ele.name.common}`}>
                     <img src={ele.flags.png} alt={ele.name.common}/>

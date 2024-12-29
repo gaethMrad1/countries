@@ -19,7 +19,7 @@ function CountryDetail() {
 
   return (
     <div className="country-detail">
-        {country.map(coun => {
+        {country && country.map(coun => {
             return (
                 <>
                     <img src={coun.flags?.png} alt={coun.name?.common}/>
